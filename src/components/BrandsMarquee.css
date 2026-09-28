@@ -1,0 +1,99 @@
+.brands-marquee-section {
+  width: 100%;
+  background-color: #121212; /* Dark background, match karta hua */
+  padding: 40px 0;
+  border-bottom: 1px solid #333; /* Halki line neeche */
+}
+
+.marquee-title {
+  text-align: center;
+  color: #888; /* Gray color */
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden; /* Chupa deta hai jo track se bahar ho */
+  position: relative;
+}
+
+/* Infinite Scroll Animation Keyframes */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Poori track ka aadha hissa move karega */
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: calc(200px * 8); /* Logo width * total logos (doubled) */
+  animation: scroll 30s linear infinite; /* Animation speed */
+}
+
+.brand-logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px; /* Har logo ka width */
+  height: 80px; /* Height consistency ke liye */
+  padding: 0 20px;
+  flex-shrink: 0; /* Logo ko shrink hone se rokay ga */
+}
+.brand-logo-item img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.brand-name {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .brands-marquee-section {
+    padding: 30px 0;
+  }
+  .brand-logo-item {
+    width: 150px;
+    height: 60px;
+  }
+  .brand-logo-item img {
+    max-height: 40px;
+  }
+}
+
+.brand-logo-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 220px;
+  height: 80px;
+  padding: 0 15px;
+  flex-shrink: 0;
+}
+
+.brand-logo-item img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.brand-name {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}

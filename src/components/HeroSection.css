@@ -1,0 +1,122 @@
+.hero-section {
+  width: 100%;
+  min-height: 90vh; /* Thodi kam height taake Navbar se niche shuru ho */
+  background-color: #121212; /* Dark Background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 5%; /* Top padding Navbar ke liye */
+  margin-top: 80px; /* Navbar ki height jitna margin */
+}
+
+.hero-container {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Do barabar hissay */
+  gap: 50px;
+ justify-items: left;
+  align-items: left;
+}
+
+/* Left Side Styling */
+.hero-text h1 {
+  font-size: 56px;
+  font-weight: 700;
+  color: #F8F9FA;
+  line-height: 1.1;
+  margin-bottom: 20px;
+
+}
+
+.hero-text h1 span {
+  color: #FF6B35; /* Vibrant Orange Accent */
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #A0A0A0; /* Light Gray Text */
+  margin-bottom: 40px;
+  line-height: 1.6;
+  max-width: 550px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+/* Buttons Styling */
+.btn-primary {
+  background: linear-gradient(135deg, #FF6B35, #FF4500);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 107, 53, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #F8F9FA;
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  border: 2px solid #F8F9FA;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(248, 249, 250, 0.1);
+}
+
+/* Right Side: Image Styling */
+.hero-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px; /* Halkay se rounded corners */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* Responsive Design (Tablet & Mobile) */
+@media screen and (max-width: 768px) {
+  .hero-section {
+    padding: 50px 5%;
+    margin-top: 70px;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr; /* Aik column ban jayega */
+    text-align: center; /* Text center ho jayega */
+    gap: 40px;
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
+    text-align:start; /* Heading center ho jayega */
+  }
+
+  .hero-text p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .hero-buttons {
+    justify-content: center; /* Buttons center ho jayein ge */
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+}

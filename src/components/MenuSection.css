@@ -1,0 +1,117 @@
+.menu-section {
+  width: 100%;
+  background-color: #121212; /* Dark theme background */
+  padding: 80px 5%;
+}
+
+.menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-heading {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 700;
+  color: #F8F9FA;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Grid: 3 cards in one line on full screen */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.menu-card {
+  background-color: #1E1E1E; /* Slight lighter dark shade for card */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(255, 107, 53, 0.2);
+}
+
+.menu-img-box {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.menu-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.menu-card:hover .menu-img-box img {
+  transform: scale(1.08);
+}
+
+.menu-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.menu-info h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #F8F9FA;
+  margin: 0;
+}
+
+.menu-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #FF6B35; /* Orange accent */
+}
+
+.menu-order-btn {
+  background: linear-gradient(135deg, #FF6B35, #FF4500);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.menu-order-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* Fully Responsive Breakpoints */
+@media screen and (max-width: 992px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr); /* Tablet par 2 cards aik line mein */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menu-grid {
+    grid-template-columns: 1fr; /* Mobile par 1 card aik line mein */
+  }
+  .menu-heading {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+}
